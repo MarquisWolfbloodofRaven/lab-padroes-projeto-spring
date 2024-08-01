@@ -7,3 +7,9 @@ import org.springframework.stereotype.Repository;
 public interface ClienteRepository extends CrudRepository<Cliente, Long> {
 
 }
+
+public interface ClienteRepository extends CrudRepository<Cliente, Long> {
+
+    List<Cliente> findByIdBetween(Long idStart, Long idEnd);
+    
+}
